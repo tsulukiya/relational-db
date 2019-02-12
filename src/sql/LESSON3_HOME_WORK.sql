@@ -1,0 +1,85 @@
+INSERT INTO PRODUCT
+VALUES (1001, 'modem', 'man1', 10);
+
+INSERT INTO PRODUCT
+VALUES (1002, 'modem', 'man12', 20);
+
+INSERT INTO PRODUCT
+VALUES (1003, 'modem', 'man13', 30);
+
+INSERT INTO PRODUCT
+VALUES (1004, 'modem', 'man14', 40);
+
+INSERT INTO PRODUCT
+VALUES (1005, 'modem', 'man15', 50);
+
+INSERT INTO PRODUCT
+VALUES (1006, 'modem', 'man16', 60);
+
+INSERT INTO PRODUCT
+VALUES (1007, 'modem', 'man17', 70);
+
+INSERT INTO PRODUCT
+VALUES (1008, 'modem', 'man18', 80);
+
+INSERT INTO PRODUCT
+VALUES (1009, 'modem', 'man19', 90);
+
+INSERT INTO PRODUCT
+VALUES (1011, 'modem', 'man21', 100);
+
+
+INSERT INTO ORDERS
+VALUES(1001, 'test1', 140, TO_DATE('2018/02/02 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2019/02/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1002, 'test2', 1403, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1003, 'test3', 1402, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1004, 'test4', 1440, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1005, 'test5', 1112, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1006, 'test6', 2321, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1007, 'test7', 1409, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1008, 'test8', 1404, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1009, 'test9', 1200, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+INSERT INTO ORDERS
+VALUES(1011, 'test10', 1125, TO_DATE('2017/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),
+TO_DATE('2017/05/03 23:02:44', 'yyyy/mm/dd hh24:mi:ss'));
+
+
+SELECT * FROM PRODUCT WHERE NAME = 'toy123' AND COST_PRICE = 50;
+
+SELECT * FROM PRODUCT WHERE ID = 1005 AND COST_PRICE < 50;
+
+SELECT * FROM PRODUCT WHERE ID > 1005 AND MANUFACTURER_NAME = 'someManufacturer';
+
+SELECT * FROM PRODUCT;
+
+UPDATE PRODUCT SET NAME = 'modem1' WHERE ID = 1002;
+
+UPDATE PRODUCT SET MANUFACTURER_NAME = 'china' WHERE NAME = 'modem1';
+
+DELETE FROM ORDERS WHERE ID < 1050;
